@@ -23,7 +23,7 @@ class App extends Component {
   };
   getMovies = () => {
     axios
-      .get(`https://www.omdbapi.com/?s=vegas&type=movie&apikey=4d3f7a95&page=1`)
+      .get(`https://cors-anywhere.herokuapp.com/https://www.omdbapi.com/?s=vegas&type=movie&apikey=4d3f7a95&page=1`)
       .then((response) => {
         this.setState({
           movieArray: response.data.Search,
@@ -38,8 +38,7 @@ class App extends Component {
     let response = await axios(
       `https://opentdb.com/api.php?amount=25&category=11`
     );
-    console.log(response);
-    this.setState({
+     this.setState({
       triviaArray: response,
     });
   };
@@ -54,15 +53,13 @@ class App extends Component {
     event.preventDefault();
     axios
       .get(
-        `https://www.omdbapi.com/?s=${this.state.search}&type=movie&apikey=4d3f7a95`
+        `https://cors-anywhere.herokuapp.com/https://www.omdbapi.com/?s=${this.state.search}&type=movie&apikey=4d3f7a95`
       )
       .then((response) => {
-        console.log(response);
         this.setState({
           movieArray: response.data.Search,
-        });
+          });
       });
-    console.log(this.props);
     this.props.history.push("/");
   };
 

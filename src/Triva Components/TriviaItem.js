@@ -1,7 +1,6 @@
 import React from 'react'
 
 let TriviaItem = ({ item }) => {
-    console.log(item)
     return (
         <div className='triviacard'>
         <div className='card-inner'>

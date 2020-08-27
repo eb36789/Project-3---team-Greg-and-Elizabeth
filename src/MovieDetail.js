@@ -20,7 +20,6 @@ class MovieDetail extends Component {
     };
   }
   componentDidMount = (props) => {
-    console.log(this.props);
     axios
       .get(
         `https://www.omdbapi.com/?apikey=4d3f7a95&page=1&i=${this.props.match.params.imdbID}`
@@ -55,7 +54,7 @@ class MovieDetail extends Component {
         <nav className="homepage">
           <Link to="/">return to Movie Home Page</Link>
           <br></br>
-          <Link to="/MovieTrivia">check out some movie trivia</Link>
+          <Link to="/MovieTrivia">check out some Movie Trivia</Link>
         </nav>
         <div className="header">
           {" "}
