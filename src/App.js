@@ -54,7 +54,7 @@ class App extends Component {
     event.preventDefault();
     axios
       .get(
-        `http://www.omdbapi.com/?s=${this.state.search}&type=movie&apikey=4d3f7a95`
+        `https://www.omdbapi.com/?s=${this.state.search}&type=movie&apikey=4d3f7a95`
       )
       .then((response) => {
         console.log(response);
