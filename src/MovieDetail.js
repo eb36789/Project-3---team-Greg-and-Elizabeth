@@ -23,7 +23,7 @@ class MovieDetail extends Component {
     console.log(this.props);
     axios
       .get(
-        `http://www.omdbapi.com/?apikey=4d3f7a95&page=1&i=${this.props.match.params.imdbID}`
+        `https://www.omdbapi.com/?apikey=4d3f7a95&page=1&i=${this.props.match.params.imdbID}`
       )
       .then((response) => {
         let ratings = response.data.Ratings.map((rating) => {
